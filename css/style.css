@@ -160,6 +160,9 @@ section .wrapper, footer .wrapper {
 .intro .wrapper, .detail .wrapper {
 	padding-bottom: 16px;
 }
+.last .wrapper {
+	padding-bottom: 32px;
+}
 
 footer .wrapper {
     font-size: 14px;
