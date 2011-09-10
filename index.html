@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<title>$.html5data</title>
+<meta name="viewport" content="width=724" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<header>
+	<div class="wrapper">
+		<h1>$.html5data</h1>
+	</div>
+</header>
+
+<section class="intro">
+	<div class="wrapper">
+		<p>You wrote an awesome jQuery plugin. You're already <a href="http://api.jquery.com/jQuery.extend" target="_blank">$.extend</a>ing like a boss.<br />Now make any setting available to your plugin users via HTML5 data attributes.</p>
+	</div>
+</section>
+
+<section class="buttons">
+	<div class="wrapper">
+		<ul class="buttons">
+			<li><a href="https://github.com/markdalgleish/jquery-html5data/blob/master/jquery.html5data.min.js" id="downloadbutton-top" target="_blank">Download the Plugin</a></li>
+			<li><a href="https://github.com/markdalgleish/jquery-html5data" id="githubbutton-top" target="_blank">Contribute on GitHub</a></li>
+		</ul>
+	</div>
+</section>
+
+<section class="sample html">
+	<div class="wrapper">
+		<h1>Turn this:</h1>
+<pre>&lt;section
+data-myplugin-foo-bar="true"
+data-myplugin-offset-x="10"
+data-myplugin-offset-y="20"&gt;
+&lt/section&gt;</pre>
+	</div>
+</section>
+
+<section class="sample json">
+	<div class="wrapper">
+		<h1>Into this:</h1>
+<pre>{
+    //note the lack of the 'myplugin' prefix
+    fooBar: true,
+    offsetX: 10,
+    offsetY: 20
+}
+</pre>
+	</div>
+</section>
+
+<section class="sample javascript">
+	<div class="wrapper">
+		<h1>So you can do this:</h1>
+<pre>var settings = $.extend(
+        {}, //new object
+        defaults,
+        options,
+        $elem.html5data('myplugin')
+    );</pre>
+	</div>
+</section>
+
+<section class="sample javascript dependancy">
+	<div class="wrapper">
+		<h1>Don't want a dependancy?</h1>
+<pre>var settings = $.extend(
+        {},
+        defaults,
+        options,
+
+        //check if the plugin exists first
+        ( typeof $.html5data === 'function' ?
+          $elem.html5data('myplugin')
+          //if not, fall back to the global namespace
+          : $elem.data() )
+    );</pre>
+	</div>
+</section>
+
+<section class="sample settings">
+	<div class="wrapper">
+		<h1>Customise $.html5data</h1>
+		<p>All settings are completely optional.</p>
+<pre>$elem.html5data('myplugin', {
+	
+    //boolean settings
+    parseBooleans: true|false [default: true],
+    parseNulls: true|false [default: true],
+    parseNumbers: true|false [default: true],
+
+    //custom parsing function
+    parse: function(val){ return val; }
+
+});</pre>
+	</div>
+</section>
+
+<section class="detail">
+	<div class="wrapper">
+		<h1>Why would you want this?</h1>
+		<p>Because it makes your plugin even more awesome.</p>
+	</div>
+</section>
+
+<section class="detail">
+	<div class="wrapper">
+		<h1>Oh, you wanted more detail?</h1>
+		<p>jQuery's <a href="http://api.jquery.com/data/" target="_blank">data method</a>, when called without a parameter (as of v1.4.3), converts the HTML 5 data attributes and all values set against an element using $.data into a single hash that you can <a href="http://api.jquery.com/jQuery.extend" target="_blank">$.extend</a> with your plugin's default settings.</p>
+		<p>There are a couple of problems when using this approach with HTML 5 data:</p>
+		<ul>
+			<li>All data attributes occupy the same namespace.</li>
+			<li>Any other data set with $.data is also included in the hash.</li>
+		</ul>
+		<p>The purpose $.html5data is to:</p>
+		<ul>
+			<li>Prevent attribute name collisions.</li>
+			<li>Allow you to present clean, namespaced attributes.</li>
+			<li>Follow best practices while keeping your code beautiful.</li>
+		</ul>
+		<p>As a bonus, $.html5data parses JSON, booleans, nulls and numbers by default.</p>
+		<p>Unlike $.data, each of these parsing options can be optionally disabled. You can even create your own custom parsing function.</p>
+	</div>
+</section>
+
+<section class="detail">
+	<div class="wrapper">
+		<h1>Using $.html5data in your project?</h1>
+		<p>I'd love to hear about it! Let me know on <a href="http://www.twitter.com/markdalgleish" target="_blank" id="twitter-paragraph">Twitter</a> or <a href="https://github.com/markdalgleish" target="_blank" id="github-profile">GitHub</a>&mdash; and,
+		of course, if you have any improvements, send me a pull request!</p>
+	</div>
+</section>
+
+	<a href="https://github.com/markdalgleish/jquery-html5data" id="github-ribbon" target="_blank">Fork me on GitHub</a>
+
+<footer>
+	<div class="wrapper">
+		<a href="http://www.twitter.com/markdalgleish" class="photo" id="photo" target="_blank">
+			<img src="http://www.gravatar.com/avatar/eec502b7f6f17f63f1e36d1cd566a254?s=64" height="64" width="64" alt="Gravatar" />
+		</a>
+		<div class="credits">
+			<p>&copy; 2011 <a href="http://www.markdalgleish.com" id="blog" target="_blank">Mark Dalgleish</a>.<br />This plugin is released under the <a href="https://github.com/markdalgleish/jquery-html5data/blob/master/MIT-LICENSE.txt" id="license" target="_blank">MIT License</a> <br />Follow me on Twitter! <a href="http://www.twitter.com/markdalgleish" id="twitter" target="_blank">@markdalgleish</a></p>
+			
+			<p>More plugin goodness: <a href="http://markdalgleish.com/projects/fathom" id="fathom" target="_blank">Fathom.js</a>, <a href="http://markdalgleish.com/projects/tmpload" id="tmpload" target="_blank">tmpload</a>.</p>
+			
+			<blockquote>
+				&#8220;Always remember that your best work is ahead of you.&#8221;
+				<cite>&mdash;<a href="http://www.twitter.com/jng5" target="_blank">@jng5</a></cite>
+			</blockquote>
+		</div>
+	</div>
+</footer>
+
+
+<script>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>
+try{
+var pageTracker = _gat._getTracker("UA-21855678-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script src="js/script.js"></script>
+<script src="js/prettify.js"></script>
+
+</body>
+</html>

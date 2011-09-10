@@ -1,0 +1,183 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: #4FFFD5;
+    font: 16px/32px helvetica, arial;
+}
+
+.wrapper{
+    margin: auto;
+	overflow: visible;
+    width: 560px;
+}
+
+header .wrapper {
+	text-align: center;
+	width: auto;
+}
+
+header h1 {
+    font-size: 113px;
+    line-height: 113px;
+    letter-spacing: -3px;
+    padding: 32px 0;
+	position: relative;
+	left: -4px;
+}
+
+section h1 {
+    font-size: 32px;
+    letter-spacing: -1px;
+    line-height: 32px;
+    margin-bottom: 24px;
+}
+
+p, ul {
+	margin-bottom: 16px;
+}
+
+li {
+	list-style-type: square;
+}
+
+a {
+    border-bottom: 1px dotted black;
+    color: white;
+    display: inline-block;
+    line-height: 18px;
+    margin-right: 3px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 black;
+}
+a:hover {
+	border-color: white;
+}
+
+.buttons {
+	white-space: nowrap;
+}
+
+.buttons li {
+    display: inline-block;
+}
+
+.buttons a {
+    background: black;
+    border: 4px solid black;
+    color: #4FFFD5;
+    display: block;
+    padding: 20px 0;
+    margin-right: 0;
+	text-align: center;
+    text-shadow: none;
+	width: 270px;
+}
+.buttons a:hover {
+    background: none;
+    color: black;
+}
+
+pre {
+    font-family: courier new;
+}
+
+.atv, .kwd, .lit, .str, .com {
+    text-shadow: 1px 1px 0 white;
+}
+
+.javascript .kwd {
+    text-shadow: none;
+}
+
+#github-ribbon {
+    background-image: url(../img/forkme.png);
+    border: 0;
+    height: 149px;
+    line-height: 500px;
+	margin: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 149px;
+}
+
+section .wrapper, footer .wrapper {
+    border-top: 4px solid black;
+    padding: 32px 0;
+}
+.intro .wrapper, .detail .wrapper {
+	padding-bottom: 16px;
+}
+
+footer .wrapper {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+footer a.photo {
+	display: inline-block;
+	line-height: 0;
+    margin-right: 32px;
+	padding: 0;
+    border: 1px solid black;
+	vertical-align: top;
+}
+
+.credits {
+	display: inline-block;
+	margin-bottom: 64px;
+    position: relative;
+    top: -5px;
+}
